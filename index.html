@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words by Dev</title>
+
+    <!-- Meta / PWA-friendly -->
+    <meta name="description" content="Words by Dev — poems & philosophical reflections. A small collection of poems and aphorisms exploring life, love and existence.">
+    <meta name="theme-color" content="#f8fafc">
+    <meta name="author" content="Dev">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: modern minimalist -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page: Minimal dark tech aesthetic -->
+    <div id="landing" class="hero neon-grid">
+        <div class="grid-bg" aria-hidden="true"></div>
+        <div class="hero-inner container">
+            <div class="hero-content" role="banner">
+                <div class="glyph" aria-hidden="true">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="60" height="60" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+                        <circle cx="40" cy="40" r="20" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.6"/>
+                        <line x1="30" y1="40" x2="50" y2="40" stroke="#0ea5e9" stroke-width="1"/>
+                    </svg>
+                </div>
+
+                <h1 class="title-main">Words by Dev</h1>
+                <p class="tagline">“A journey of reflection, introspection, emotion, and self-discovery”</p>
+
+                <div class="cta-group">
+                    <a href="#poems" class="btn-primary">poems</a>
+                    <a href="#quotes" class="btn-secondary">quotes</a>
+                </div>
+            </div>
+
+            <!-- animated accent lines -->
+            <div class="accent-lines" aria-hidden="true">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Words by Dev</div>
+            <nav aria-label="Primary">
+                <a href="#poems">poems</a>
+                <a href="#quotes">quotes</a>
+                <a href="#about">about</a>
+            </nav>
+            <button id="toggle-dark" aria-pressed="false" title="Toggle theme" class="theme-toggle">◯</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Poems Section - Tab Based Reader -->
+        <section id="poems" class="section poems-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>poems</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Navigation Tabs (ordered as requested) -->
+                <div class="poems-nav" role="tablist" aria-label="Poems">
+                    <button class="poem-tab active" data-poem="1" aria-selected="true" role="tab" aria-controls="poem-1">Fumbled</button>
+                    <button class="poem-tab" data-poem="2" aria-selected="false" role="tab" aria-controls="poem-2">It Felt Like</button>
+                    <button class="poem-tab" data-poem="3" aria-selected="false" role="tab" aria-controls="poem-3">Hey Moon</button>
+                    <button class="poem-tab" data-poem="4" aria-selected="false" role="tab" aria-controls="poem-4">Unsaid</button>
+                    <button class="poem-tab" data-poem="5" aria-selected="false" role="tab" aria-controls="poem-5">Her Eyes</button>
+                    <button class="poem-tab" data-poem="6" aria-selected="false" role="tab" aria-controls="poem-6">I Dared to Dream</button>
+                </div>
+
+                <!-- Poems Display Area -->
+                <div class="poems-display" role="region" aria-live="polite">
+                    <!-- Poem 1 -->
+                    <div id="poem-1" class="poem-view active" data-poem="1" role="tabpanel">
+                        <div class="poem-header">
+                            <h3 class="poem-title">I Just Fumbled Hard at Life</h3>
+                            <span class="poem-counter">01 / 06</span>
+                        </div>
+                        <div class="poem-content">
+                            <div class="stanza">
+                                <p>I just fumbled hard at life,</p>
+                                <p>On the way to find a life!</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Is it supposed to be that bad?</p>
+                                <p>If so, why does it feel so dead?</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Is there any redemption?</p>
+                                <p>Where there's no temptation?</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Even with all my inclination,</p>
+                                <p>All that's left is just an imagination…</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poem 2 -->
+                    <div id="poem-2" class="poem-view" data-poem="2" role="tabpanel" hidden>
+                        <div class="poem-header">
+                            <h3 class="poem-title">It Felt Like Being Something Near</h3>
+                            <span class="poem-counter">02 / 06</span>
+                        </div>
+                        <div class="poem-content">
+                            <div class="stanza">
+                                <p>It felt like being something near,</p>
+                                <p>Nothing much, yet there was no fear.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Wondered it could be something dear,</p>
+                                <p>Leaving lingering uncertainties in rear.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Eventually felt like a stranger!</p>
+                                <p>Until the words will be clearer...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poem 3 -->
+                    <div id="poem-3" class="poem-view" data-poem="3" role="tabpanel" hidden>
+                        <div class="poem-header">
+                            <h3 class="poem-title">Hey Moon</h3>
+                            <span class="poem-counter">03 / 06</span>
+                        </div>
+                        <div class="poem-content">
+                            <div class="stanza">
+                                <p>Hey moon, are you looking at me?</p>
+                                <p>I can see your light, somedays</p>
+                                <p>Somedays you just vanish, and I can't</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Will you be shining for me?</p>
+                                <p>Hey moon, are you looking at me?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poem 4 -->
+                    <div id="poem-4" class="poem-view" data-poem="4" role="tabpanel" hidden>
+                        <div class="poem-header">
+                            <h3 class="poem-title">Unsaid, Unheard</h3>
+                            <span class="poem-counter">04 / 06</span>
+                        </div>
+                        <div class="poem-content">
+                            <div class="stanza">
+                                <p>There's so much unsaid</p>
+                                <p>So much unheard</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Maybe one day she'll talk,</p>
+                                <p>and I'll just... listen.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>I wonder if the universe</p>
+                                <p>will ever let me have that moment,</p>
+                                <p>or if it will always</p>
+                                <p>just remain a dream.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poem 5 -->
+                    <div id="poem-5" class="poem-view" data-poem="5" role="tabpanel" hidden>
+                        <div class="poem-header">
+                            <h3 class="poem-title">Her Eyes</h3>
+                            <span class="poem-counter">05 / 06</span>
+                        </div>
+                        <div class="poem-content">
+                            <div class="stanza">
+                                <p>The eyes, see so many eyes</p>
+                                <p>Yet they end up craving, for a pair of eyes</p>
+                            </div>
+                            <div class="stanza">
+                                <p>The eyes, conceal lots of secrets</p>
+                                <p>Yet, they end up revealing to the eyes</p>
+                            </div>
+                            <div class="stanza">
+                                <p>The eyes, hide the pains within</p>
+                                <p>Yet, it feels for some eyes</p>
+                            </div>
+                            <div class="stanza">
+                                <p>The eyes, yearn for so many things</p>
+                                <p>Yet, it finds solace in someone's eyes</p>
+                            </div>
+                            <div class="stanza">
+                                <p>The beauty lies in the eyes</p>
+                                <p>All we need, a set of eyes</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Deeper than the seas, her eyes!</p>
+                                <p>Her eyes, those beautiful eyes!</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Filled with innocence, dreams & ready to fly</p>
+                                <p>I see, those eyes, her beautiful eyes!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poem 6 -->
+                    <div id="poem-6" class="poem-view" data-poem="6" role="tabpanel" hidden>
+                        <div class="poem-header">
+                            <h3 class="poem-title">I Dared to Dream of Something Beautiful</h3>
+                            <span class="poem-counter">06 / 06</span>
+                        </div>
+                        <div class="poem-content">
+                            <div class="stanza">
+                                <p>I dared to dream of something beautiful,</p>
+                                <p>and oh, it really felt so wonderful.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>There's nothing wrong in being hopeful,</p>
+                                <p>Cause, indeed, that'd be something beautiful!</p>
+                            </div>
+                            <div class="stanza">
+                                <p>That's what makes this journey worthwhile,</p>
+                                <p>Keeps us journeying mile after mile.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>Hey universe, would you send me a sign?</p>
+                                <p>If it turns into reality, this dream of mine...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="poems-controls">
+                    <button class="nav-btn prev-btn" aria-label="Previous poem">← prev</button>
+                    <button class="nav-btn next-btn" aria-label="Next poem">next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section id="quotes" class="section quotes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>quotes</h2>
+                    <div class="divider"></div>
+                </div>
+                <ol class="quotes-list">
+                    <li><span class="quote-num">01.</span> Democracy is just another form of governance, where masses are kept in illusion of control, while serving their overlords.</li>
+                    <li><span class="quote-num">02.</span> An accomplished writer is a philosopher entangled with multitude of views.</li>
+                    <li><span class="quote-num">03.</span> Love's a psychological warfare between two individuals, where they eventually come to an agreement and reach a stalemate!</li>
+                    <li><span class="quote-num">04.</span> Adhering to society's moral compass of good and bad is merely a deception of humanity's inherent hypocrisy.</li>
+                    <li><span class="quote-num">05.</span> What brainrot did to the internet, major religions once did to the classical ages across civilisations.</li>
+                    <li><span class="quote-num">06.</span> India thrives in unity in diversity. Let's not trade it for uniformity.</li>
+                    <li><span class="quote-num">07.</span> Life is a boring ode to our wishful thinking & unfulfilled wishes.</li>
+                    <li><span class="quote-num">08.</span> History is a glorified narrative masquerading as facts.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>about</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-content">
+                    <p>Through poetry and philosophical quotes, Dev seeks to capture the subtle complexities of emotions, society, and existence. Trying to explore the human nature, and reflections through words.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Words by Dev. all rights held back.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+    // Dark Mode Toggle
+    const toggleBtn = document.getElementById('toggle-dark');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const pressed = toggleBtn.getAttribute('aria-pressed') === 'true';
+            toggleBtn.setAttribute('aria-pressed', String(!pressed));
+            document.body.classList.toggle('dark-mode');
+        });
+    }
+
+    // Scroll animations
+    const sections = document.querySelectorAll('.section');
+    function checkVisibility() {
+        const triggerBottom = window.innerHeight * 0.85;
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < triggerBottom) {
+                section.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+
+    // Hero CTA buttons - smooth scroll
+    const poemsBtn = document.querySelector('a[href="#poems"]');
+    const quotesBtn = document.querySelector('a[href="#quotes"]');
+    
+    if (poemsBtn) {
+        poemsBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('#poems').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    if (quotesBtn) {
+        quotesBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('#quotes').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    // Poem Navigation
+    (function() {
+        const tabs = document.querySelectorAll('.poem-tab');
+        const views = document.querySelectorAll('.poem-view');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentPoem = 1;
+
+        function showPoem(poemNum) {
+            // Validate poem number
+            if (poemNum < 1 || poemNum > 6) return;
+
+            // Remove active from all views and tabs
+            views.forEach(view => {
+                view.classList.remove('active');
+            });
+            
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-selected', 'false');
+            });
+
+            // Add active to current view and tab
+            const activeView = document.querySelector(`.poem-view[data-poem="${poemNum}"]`);
+            const activeTab = document.querySelector(`.poem-tab[data-poem="${poemNum}"]`);
+
+            if (activeView) {
+                activeView.classList.add('active');
+            }
+            if (activeTab) {
+                activeTab.classList.add('active');
+                activeTab.setAttribute('aria-selected', 'true');
+            }
+
+            currentPoem = poemNum;
+        }
+
+        // Tab click handlers
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const poemNum = parseInt(tab.dataset.poem, 10);
+                showPoem(poemNum);
+            });
+        });
+
+        // Previous button
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                let nextNum = currentPoem - 1;
+                if (nextNum < 1) nextNum = 6;
+                showPoem(nextNum);
+            });
+        }
+
+        // Next button
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                let nextNum = currentPoem + 1;
+                if (nextNum > 6) nextNum = 1;
+                showPoem(nextNum);
+            });
+        }
+
+        // Keyboard navigation
+        window.addEventListener('keydown', (e) => {
+            const activeView = document.querySelector('.poem-view.active');
+            if (activeView) {
+                if (e.key === 'ArrowLeft' && prevBtn) {
+                    e.preventDefault();
+                    prevBtn.click();
+                }
+                if (e.key === 'ArrowRight' && nextBtn) {
+                    e.preventDefault();
+                    nextBtn.click();
+                }
+            }
+        });
+
+        // Initialize first poem as active
+        showPoem(1);
+    })();
+    </script>
+</body>
+</html>
