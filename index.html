@@ -83,6 +83,7 @@
                     <button class="poem-tab" data-poem="6" aria-selected="false" role="tab" aria-controls="poem-6">It Felt Like</button>
                     <button class="poem-tab" data-poem="7" aria-selected="false" role="tab" aria-controls="poem-7">Her Eyes</button>
                     <button class="poem-tab" data-poem="8" aria-selected="false" role="tab" aria-controls="poem-8">I Dared to Dream Of</button>
+                    <button class="poem-tab" data-poem="9" aria-selected="false" role="tab" aria-controls="poem-9">The Unchanted Voice</button>
                 </div>
 
                 <!-- Poems Display Area -->
@@ -91,7 +92,7 @@
                     <div id="poem-1" class="poem-view active" data-poem="1" role="tabpanel">
                         <div class="poem-header">
                             <h3 class="poem-title">Joy</h3>
-                            <span class="poem-counter">01 / 08</span>
+                            <span class="poem-counter">01 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -129,7 +130,7 @@
                     <div id="poem-2" class="poem-view" data-poem="2" role="tabpanel" hidden>
                         <div class="poem-header">
                             <h3 class="poem-title">The Departed</h3>
-                            <span class="poem-counter">02 / 08</span>
+                            <span class="poem-counter">02 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -151,7 +152,7 @@
                     <div id="poem-3" class="poem-view" data-poem="3" role="tabpanel" hidden>
                         <div class="poem-header">
                             <h3 class="poem-title">Fumbled</h3>
-                            <span class="poem-counter">03 / 08</span>
+                            <span class="poem-counter">03 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -177,7 +178,7 @@
                     <div id="poem-4" class="poem-view" data-poem="4" role="tabpanel" hidden>
                         <div class="poem-header">
                             <h3 class="poem-title">Unsaid, Unheard</h3>
-                            <span class="poem-counter">04 / 08</span>
+                            <span class="poem-counter">04 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -201,7 +202,7 @@
                     <div id="poem-5" class="poem-view" data-poem="5" role="tabpanel" hidden>
                         <div class="poem-header">
                             <h3 class="poem-title">Hey Moon</h3>
-                            <span class="poem-counter">05 / 08</span>
+                            <span class="poem-counter">05 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -220,7 +221,7 @@
                     <div id="poem-6" class="poem-view" data-poem="6" role="tabpanel" hidden>
                         <div class="poem-header">
                             <h3 class="poem-title">It Felt Like</h3>
-                            <span class="poem-counter">06 / 08</span>
+                            <span class="poem-counter">06 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -242,7 +243,7 @@
                     <div id="poem-7" class="poem-view" data-poem="7" role="tabpanel" hidden>
                         <div class="poem-header">
                             <h3 class="poem-title">Her Eyes</h3>
-                            <span class="poem-counter">07 / 08</span>
+                            <span class="poem-counter">07 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -280,7 +281,7 @@
                     <div id="poem-8" class="poem-view" data-poem="8" role="tabpanel" hidden>
                         <div class="poem-header">
                             <h3 class="poem-title">I Dared to Dream Of</h3>
-                            <span class="poem-counter">08 / 08</span>
+                            <span class="poem-counter">08 / 09</span>
                         </div>
                         <div class="poem-content">
                             <div class="stanza">
@@ -298,6 +299,36 @@
                             <div class="stanza">
                                 <p>Hey universe, would you send me a sign?</p>
                                 <p>If it turns into reality this dream of mine..</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poem 9 -->
+                    <div id="poem-9" class="poem-view" data-poem="9" role="tabpanel" hidden>
+                        <div class="poem-header">
+                            <h3 class="poem-title">The Unchanted Voice</h3>
+                            <span class="poem-counter">09 / 09</span>
+                        </div>
+                        <div class="poem-content">
+                            <div class="stanza">
+                                <p>The unchanted voice in my ears,</p>
+                                <p>Lingers quietly within me and tears.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>A dream so far from reality,</p>
+                                <p>Yet a desire full of certainty.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>A heart knows, what heart wants,</p>
+                                <p>But does she know, what her wants?</p>
+                            </div>
+                            <div class="stanza">
+                                <p>A feeling so pure, yet at the mercy,</p>
+                                <p>Still needs the grant of an agency.</p>
+                            </div>
+                            <div class="stanza">
+                                <p>A tryst of play between heart and mind,</p>
+                                <p>Conflicted, yet a helpless desire of one kind..</p>
                             </div>
                         </div>
                     </div>
@@ -407,7 +438,7 @@
 
         function showPoem(poemNum) {
             // Validate poem number
-            if (poemNum < 1 || poemNum > 8) return;
+            if (poemNum < 1 || poemNum > 9) return;
 
             // Remove active from all views and tabs
             views.forEach(view => {
@@ -447,7 +478,7 @@
             prevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 let nextNum = currentPoem - 1;
-                if (nextNum < 1) nextNum = 8;
+                if (nextNum < 1) nextNum = 9;
                 showPoem(nextNum);
             });
         }
@@ -457,7 +488,7 @@
             nextBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 let nextNum = currentPoem + 1;
-                if (nextNum > 8) nextNum = 1;
+                if (nextNum > 9) nextNum = 1;
                 showPoem(nextNum);
             });
         }
